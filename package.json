@@ -1,0 +1,27 @@
+{
+  "name": "jschema-deref",
+  "version": "0.1.0",
+  "description": "De-referencer for JSON Schema",
+  "main": "index.js",
+  "bin": {
+    "jsderef": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus Zanona <zanona@me.com>",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.5.5",
+    "lodash": "^4.6.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zanona/yaml-json-schema-expander.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zanona/yaml-json-schema-expander/issues"
+  },
+  "homepage": "https://github.com/zanona/yaml-json-schema-expander#readme"
+}
