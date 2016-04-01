@@ -4,4 +4,4 @@ var run = require('./'),
     src = process.argv.splice(2)[0];
 
 src = path.resolve(src);
-console.log(JSON.stringify(run(src), null, 2));
+process.stdout.write(JSON.stringify(run(src), null, 2));
