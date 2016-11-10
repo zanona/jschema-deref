@@ -2,15 +2,14 @@ var read    = require('fs').readFileSync,
     path    = require('path'),
     yaml    = require('js-yaml'),
     lodash  = require('lodash'),
-    processDir = path.dirname(process.argv[1]) || './',
     cache = {};
 
 function init(src) {
     var srcPath,
-        mainDoc;
-
+        mainDoc,
+        parentDir = path.dirname(module.parent.filename);
     //User source related to where the script is called
-    src = path.resolve(processDir, src);
+    src = path.resolve(parentDir, src);
     //Set path for external $refs related to source directory
     srcPath = path.dirname(src);
 
@@ -47,6 +46,7 @@ function init(src) {
         }
     }
     function loadProps(doc) {
+        if (!doc) return;
         Object.keys(doc).forEach(function (key) {
             var p = doc[key],
                 type = p && p.constructor.name;
